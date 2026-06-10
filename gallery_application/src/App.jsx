@@ -38,26 +38,31 @@ const App = () => {
   return (
     <div className='bg-black h-screen  overflow-auto text-white'>
 
-  
+
+
+
+
+
       <div className='flex   p-15 flex-wrap gap-5'>
         {printUserData}
+
       </div>
       <div className='flex justify-center items-center p-4 '>
         <button
-        style={{opacity:index==1?0.5:1}}
-        onClick={() => {
+          style={{ opacity: index == 1 ? 0.5 : 1 }}
+          onClick={() => {
 
-         if(index>1){
-          setIndex(index-1)
+            if (index > 1) {
+              setIndex(index - 1)
 
-          setUserData([])
-          
-         }
-        }}
+              setUserData([])
+
+            }
+          }}
           className='bg-red-300  active:scale-75 font-bold text-sm cursor-pointer text-black rounded-xl m-3 p-5'>Prev</button>
-          <h4 className='text-xl font-normal'>Page Numbe:{index}</h4>
+        <h4 className='text-xl font-normal'>Page Numbe:{index}</h4>
         <button onClick={() => {
-          setIndex(index+1)
+          setIndex(index + 1)
           setUserData([])
         }}
           className='bg-red-300  active:scale-75 text-sm cursor-pointer text-black font-bold rounded-xl m-3 p-5'>Next</button>
